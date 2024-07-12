@@ -1,36 +1,47 @@
 // External Dependencies
-import { useState, useEffect } from 'react'
-// import { useGetTeamLines } from './hooks/useGetTeamLines'
+// import { useState, useEffect } from 'react'
+import { useGetTeamLines } from './hooks/useGetTeamLines';
 
 // Internal Dependencies
 
 function App() {
-  const [teamData, setTeamData] = useState({});
+  // const [teamData, setTeamData] = useState({});
 
-  const proxy = "https://cors-anywhere-gzhu.onrender.com/"
-  const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/uIiikkd2u32fY37bbYsYO/teams/"
-  const dailyFaceOffAPITag ="/line-combinations.json"
+  // const proxy = "https://cors-anywhere-gzhu.onrender.com/"
+  // const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/uIiikkd2u32fY37bbYsYO/teams/"
+  // const dailyFaceOffAPITag ="/line-combinations.json"
 
-  const fetchTeamData = async (teamName) => {
-    const url = proxy + dailyFaceOffAPIBaseURL + teamName + dailyFaceOffAPITag;
+  // const fetchTeamData = async (teamName) => {
+  //   const url = proxy + dailyFaceOffAPIBaseURL + teamName + dailyFaceOffAPITag;
 
-    const res = await fetch(url);
-    const data = await res.json();
+  //   const res = await fetch(url);
+  //   const data = await res.json();
 
-    if (res.status === 200) {
-      return data;
-    } else throw new Error(data.message);
+  //   if (res.status === 200) {
+  //     return data;
+  //   } else throw new Error(data.message);
 
-  };
+  // };
 
-  useEffect(() => {   
-    fetchTeamData('dallas-stars')
-    .then(res => {
-      setTeamData(res.pageProps);
-    });
-  }, []);
+  // useEffect(() => {   
+  //   fetchTeamData('dallas-stars')
+  //   .then(res => {
+  //     setTeamData(res.pageProps);
+  //   });
+  // }, []);
 
-  console.log("TEAM DATA: ", teamData);
+
+  // USING TAN STACK QUERY
+  const { data: teamData } = useGetTeamLines('dallas-stars');
+  
+  // const { 
+    //   data: teamData,
+    //   error,
+    //   status,
+    //   isFetching,
+    // } = useGetTeamLines('dallas-stars');
+    
+    console.log("TEAM DATA: ", teamData);
 
   return (
     <>
