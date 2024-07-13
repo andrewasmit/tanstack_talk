@@ -1,5 +1,6 @@
 // External Dependencies
 import { 
+  useMemo,
   useState, 
   // useEffect 
 } from 'react'
@@ -54,20 +55,22 @@ function App() {
     }, []);
 
 
-    const teamsToDisplay = allTeams.map( team => {
-      return <div 
-              id={team.id} 
-              key={team.id}
-              onClick={() => handleClickTeam(team.id)}
-            >
-        <img src={`https://www.dailyfaceoff.com${team.src}`} width={100}/>
-      </div>
-    })
+    const teamsToDisplay = useMemo(() => {
+      return allTeams.map( team => {
+        return <div 
+                id={team.id} 
+                key={team.id}
+                onClick={() => handleClickTeam(team.id)}
+              >
+          <img src={`https://www.dailyfaceoff.com${team.src}`} width={100}/>
+        </div>
+      })
+    }, [handleClickTeam])
 
   return (
     <>
       <h1>Hockey Teams</h1>
-      <h3>Click to See Team's Player Info</h3>
+      <h3>Click to See Team`s Player Info</h3>
       {teamsToDisplay}
     </>
   )
