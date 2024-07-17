@@ -1,9 +1,13 @@
+// External Dependencies
 import { useQuery } from "@tanstack/react-query";
 import { useCallback, useMemo } from "react";
 
+// Local Variables
 const proxy = "https://cors-anywhere-gzhu.onrender.com/"
-const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/uIiikkd2u32fY37bbYsYO/teams/"
+// const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/uIiikkd2u32fY37bbYsYO/teams/"
+const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/IUJzN1ri61lmPCqg7PeJv/teams/"
 const dailyFaceOffAPITag ="/line-combinations.json"
+
 
 // This is the function I use to execute a simple GET request from a URL that is passed in
 const fetchTeamData = async (url) => {
@@ -29,6 +33,6 @@ export const useGetTeamLines = (teamName) => {
   return useQuery({
     queryKey: [`${teamName}-lines`],
     queryFn,
-    // retry: 1,
+    retry: 2,
   });
 };
