@@ -1,0 +1,26 @@
+.heading{
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 50px 60px;
+}
+
+#team-logo-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.team-logo{
+  padding: 10px 20px;
+  transition: all ease-in-out 0.1s;
+}
+
+.team-logo:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  scale: 1.1;
+}

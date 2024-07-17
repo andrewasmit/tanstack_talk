@@ -2,13 +2,16 @@
 import { 
   useMemo,
   useState, 
+  useCallback,
   // useEffect 
 } from 'react'
-import { useGetTeamLines } from './hooks/useGetTeamLines';
 
 // Internal Dependencies
+import { useGetTeamLines } from './hooks/useGetTeamLines';
+
+// Local Dependencies
 import { allTeams } from './allTeams';
-import { useCallback } from 'react';
+import './App.css'
 
 function App() {
   // const [teamData, setTeamData] = useState({});
@@ -59,6 +62,7 @@ function App() {
       return allTeams.map( team => {
         return <div 
                 id={team.id} 
+                className='team-logo'
                 key={team.id}
                 onClick={() => handleClickTeam(team.id)}
               >
@@ -69,9 +73,14 @@ function App() {
 
   return (
     <>
-      <h1>Hockey Teams</h1>
-      <h3>Click to See Team`s Player Info</h3>
-      {teamsToDisplay}
+      <div className="heading">
+        <h1>Hockey Teams</h1>
+        <h3>Click to See Team`s Player Info</h3>
+      </div>
+
+      <div id="team-logo-container">
+        {teamsToDisplay}
+      </div>
     </>
   )
 }
