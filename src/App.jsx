@@ -1,16 +1,16 @@
 // External Dependencies
 import { 
-  useMemo,
+  // useMemo,
   useState, 
-  useCallback,
+  // useCallback,
   // useEffect 
 } from 'react'
 
 // Internal Dependencies
-import { useGetTeamLines } from './hooks/useGetTeamLines';
+// import { useGetTeamLines } from './hooks/useGetTeamLines';
 
 // Local Dependencies
-import { allTeams } from './allTeams';
+// import { allTeams } from './allTeams';
 import { useIsOpen } from './hooks/useIsOpen';
 import './App.css'
 import TeamLogos from './TeamLogos';
@@ -52,38 +52,7 @@ function App() {
 
 
   // USING TAN STACK QUERY
-  const { data: teamData } = useGetTeamLines(currentTeam);
-  
-  // const { 
-    //   data: teamData,
-    //   error,
-    //   status,
-    //   isFetching,
-    // } = useGetTeamLines('dallas-stars');
-    
-    console.log("TEAM DATA: ", teamData);
-
-    // const handleClickTeam = useCallback((id) => {
-    //   // console.log("ID: ", id)
-    //   // openPopup();
-    //   setCurrentTeam(id);
-    // // }, [openPopup]);
-    // }, []);
-
-
-    // const teamsToDisplay = useMemo(() => {
-    //   return allTeams.map( team => {
-    //     return <div 
-    //             id={team.id} 
-    //             className='team-logo'
-    //             key={team.id}
-    //             onClick={() => handleClickTeam(team.id)}
-    //           >
-    //       <img src={`https://www.dailyfaceoff.com${team.src}`} width={100}/>
-    //     </div>
-    //   })
-    // }, [handleClickTeam])
-
+  // const { data: teamData } = useGetTeamLines(currentTeam);
 
   return (
     <>
@@ -92,13 +61,8 @@ function App() {
         <h3>Click to see lines of each team</h3>
       </div>
 
-      {/* <div id="team-logo-container">
-        {teamsToDisplay}
-      </div> */}
-
       <TeamLogos 
         handleOpen={openPopup}
-        // handleClose={closePopup}
         setCurrentTeam={setCurrentTeam}
       />
 

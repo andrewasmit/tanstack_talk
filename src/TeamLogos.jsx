@@ -2,7 +2,6 @@
 import { useMemo } from 'react'
 
 // Internal Dependencies
-// import { useGetTeamLines } from './hooks/useGetTeamLines';
 
 // Local Dependencies
 import { allTeams } from './allTeams';

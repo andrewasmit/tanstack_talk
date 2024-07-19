@@ -1,10 +1,8 @@
 // External Dependencies
-// import { useMemo } from 'react'
 
 // Internal Dependencies
 
 // Local Dependencies
-// import { useIsOpen } from './hooks/useIsOpen';
 import './App.css'
 import { useMemo } from 'react';
 import { getGridClass } from './hooks/gridClassHelper';
