@@ -11,11 +11,21 @@ import { useGetTeamLines } from './hooks/useGetTeamLines';
 
 // Local Dependencies
 import { allTeams } from './allTeams';
+import { useIsOpen } from './hooks/useIsOpen';
 import './App.css'
+import TeamLogos from './TeamLogos';
+import LinesModal from './LinesModal';
 
 function App() {
   // const [teamData, setTeamData] = useState({});
   const [currentTeam, setCurrentTeam] = useState('');
+
+  const { 
+    handleOpen: openPopup, 
+    handleClose: closePopup,
+    isOpen: isPopupOpen
+  } = useIsOpen();
+
 
   // const proxy = "https://cors-anywhere-gzhu.onrender.com/"
   // const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/uIiikkd2u32fY37bbYsYO/teams/"
@@ -53,34 +63,51 @@ function App() {
     
     console.log("TEAM DATA: ", teamData);
 
-    const handleClickTeam = useCallback((id) => {
-      return setCurrentTeam(id)
-    }, []);
+    // const handleClickTeam = useCallback((id) => {
+    //   // console.log("ID: ", id)
+    //   // openPopup();
+    //   setCurrentTeam(id);
+    // // }, [openPopup]);
+    // }, []);
 
 
-    const teamsToDisplay = useMemo(() => {
-      return allTeams.map( team => {
-        return <div 
-                id={team.id} 
-                className='team-logo'
-                key={team.id}
-                onClick={() => handleClickTeam(team.id)}
-              >
-          <img src={`https://www.dailyfaceoff.com${team.src}`} width={100}/>
-        </div>
-      })
-    }, [handleClickTeam])
+    // const teamsToDisplay = useMemo(() => {
+    //   return allTeams.map( team => {
+    //     return <div 
+    //             id={team.id} 
+    //             className='team-logo'
+    //             key={team.id}
+    //             onClick={() => handleClickTeam(team.id)}
+    //           >
+    //       <img src={`https://www.dailyfaceoff.com${team.src}`} width={100}/>
+    //     </div>
+    //   })
+    // }, [handleClickTeam])
+
 
   return (
     <>
       <div className="heading">
-        <h1>Hockey Teams</h1>
-        <h3>Click to See Team`s Player Info</h3>
+        <h1>NHL Teams</h1>
+        <h3>Click to see lines of each team</h3>
       </div>
 
-      <div id="team-logo-container">
+      {/* <div id="team-logo-container">
         {teamsToDisplay}
-      </div>
+      </div> */}
+
+      <TeamLogos 
+        handleOpen={openPopup}
+        // handleClose={closePopup}
+        setCurrentTeam={setCurrentTeam}
+      />
+
+      { isPopupOpen &&
+        <LinesModal 
+          currentTeam={currentTeam}
+          handleClose={closePopup}
+        />
+      }
     </>
   )
 }

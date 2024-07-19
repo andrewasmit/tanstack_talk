@@ -24,3 +24,82 @@
   opacity: 0.8;
   scale: 1.1;
 }
+
+
+.modal-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  z-index: 1000; 
+}
+
+.modal-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999; 
+}
+
+.lines-container {
+  background-color: white;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  z-index: 1001;
+}
+
+.close-modal {
+  z-index: 1003;
+  grid-column: span 12;
+  display: block;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 24px;
+  z-index: 1000;
+}
+
+.loading-screen::before {
+  /* content: "Loading..."; */
+  animation: loadingAnimation 1.5s infinite;
+}
+
+@keyframes loadingAnimation {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.lines-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.grid-third {
+  grid-column: span 4;
+}
+
+.grid-half {
+  grid-column: span 6;
+}

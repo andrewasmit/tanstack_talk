@@ -4,8 +4,7 @@ import { useCallback, useMemo } from "react";
 
 // Local Variables
 const proxy = "https://cors-anywhere-gzhu.onrender.com/"
-// const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/uIiikkd2u32fY37bbYsYO/teams/"
-const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/IUJzN1ri61lmPCqg7PeJv/teams/"
+const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/W9FRt5PFIRBjmn5x2i5ae/teams/"
 const dailyFaceOffAPITag ="/line-combinations.json"
 
 

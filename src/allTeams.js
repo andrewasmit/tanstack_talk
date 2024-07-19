@@ -108,7 +108,7 @@ export const allTeams = [
     src: "/_next/static/media/toronto-maple-leafs.8688d30a.png",
   },
   {
-    id:' utah-hockey-club',
+    id:'utah-hockey-club',
     src: "/_next/static/media/utah-hockey-club.03502a67.png",
   },
   {
