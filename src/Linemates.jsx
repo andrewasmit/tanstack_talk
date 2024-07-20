@@ -29,23 +29,23 @@ function Linemates({ data, handleClose }) {
   }, [data]);
 
 
-  linesToDisplay.splice(0,0,<div className="grid-full grid-header">Forwards</div>);
-  linesToDisplay.splice(1,0,<div className="grid-third grid-subheader">LW</div>);
-  linesToDisplay.splice(2,0,<div className="grid-third grid-subheader">C</div>);
-  linesToDisplay.splice(3,0,<div className="grid-third grid-subheader">RW</div>);
-  linesToDisplay.splice(16,0,<div className="grid-full grid-header">Defensive Pairs</div>);
-  linesToDisplay.splice(17,0,<div className="grid-half grid-subheader">LD</div>);
-  linesToDisplay.splice(18,0,<div className="grid-half grid-subheader">RD</div>);
-  linesToDisplay.splice(25,0,<div className="grid-full grid-header">Goalies</div>);
-  linesToDisplay.splice(26,0,<div className="grid-half grid-subheader">Starting</div>);
-  linesToDisplay.splice(27,0,<div className="grid-half grid-subheader">Backup</div>);
-  linesToDisplay.splice(30,0,<div className="grid-full grid-header">Power Play 1</div>);
-  linesToDisplay.splice(36,0,<div className="grid-full grid-header">Power Play 2</div>);
-  linesToDisplay.splice(42,0,<div className="grid-full grid-header">Penalty Kill 1</div>);
-  linesToDisplay.splice(47,0,<div className="grid-full grid-header">Penalty Kill 2</div>);
+  linesToDisplay.splice(0,0,<div className="grid-full grid-header" key="forwards">Forwards</div>);
+  linesToDisplay.splice(1,0,<div className="grid-third grid-subheader" key="lw">LW</div>);
+  linesToDisplay.splice(2,0,<div className="grid-third grid-subheader" key="c">C</div>);
+  linesToDisplay.splice(3,0,<div className="grid-third grid-subheader" key="rw">RW</div>);
+  linesToDisplay.splice(16,0,<div className="grid-full grid-header" key="d">Defensive Pairs</div>);
+  linesToDisplay.splice(17,0,<div className="grid-half grid-subheader" key="ld">LD</div>);
+  linesToDisplay.splice(18,0,<div className="grid-half grid-subheader" key="rd">RD</div>);
+  linesToDisplay.splice(25,0,<div className="grid-full grid-header" key="goalies">Goalies</div>);
+  linesToDisplay.splice(26,0,<div className="grid-half grid-subheader" key="starting">Starting</div>);
+  linesToDisplay.splice(27,0,<div className="grid-half grid-subheader" key="backup">Backup</div>);
+  linesToDisplay.splice(30,0,<div className="grid-full grid-header" key="pp1">Power Play 1</div>);
+  linesToDisplay.splice(36,0,<div className="grid-full grid-header" key="pp2">Power Play 2</div>);
+  linesToDisplay.splice(42,0,<div className="grid-full grid-header" key="pk1">Penalty Kill 1</div>);
+  linesToDisplay.splice(47,0,<div className="grid-full grid-header" key="pk2">Penalty Kill 2</div>);
 
   if (linesToDisplay.length > 52){
-    linesToDisplay.splice(52,0,<div className="grid-full grid-header">Injured Reserve</div>);
+    linesToDisplay.splice(52,0,<div className="grid-full grid-header" key="ir">Injured Reserve</div>);
   }
 
   return (
