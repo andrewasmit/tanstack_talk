@@ -1,23 +1,15 @@
 // External Dependencies
-import { 
-  // useMemo,
-  useState, 
-  // useCallback,
-  // useEffect 
-} from 'react'
+import { useState } from 'react'
 
 // Internal Dependencies
-// import { useGetTeamLines } from './hooks/useGetTeamLines';
+import { useIsOpen } from './hooks/useIsOpen';
 
 // Local Dependencies
-// import { allTeams } from './allTeams';
-import { useIsOpen } from './hooks/useIsOpen';
-import './App.css'
 import TeamLogos from './TeamLogos';
 import LinesModal from './LinesModal';
+import './App.css'
 
 function App() {
-  // const [teamData, setTeamData] = useState({});
   const [currentTeam, setCurrentTeam] = useState('');
 
   const { 
@@ -25,34 +17,6 @@ function App() {
     handleClose: closePopup,
     isOpen: isPopupOpen
   } = useIsOpen();
-
-
-  // const proxy = "https://cors-anywhere-gzhu.onrender.com/"
-  // const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/uIiikkd2u32fY37bbYsYO/teams/"
-  // const dailyFaceOffAPITag ="/line-combinations.json"
-
-  // const fetchTeamData = async (teamName) => {
-  //   const url = proxy + dailyFaceOffAPIBaseURL + teamName + dailyFaceOffAPITag;
-
-  //   const res = await fetch(url);
-  //   const data = await res.json();
-
-  //   if (res.status === 200) {
-  //     return data;
-  //   } else throw new Error(data.message);
-
-  // };
-
-  // useEffect(() => {   
-  //   fetchTeamData('dallas-stars')
-  //   .then(res => {
-  //     setTeamData(res.pageProps);
-  //   });
-  // }, []);
-
-
-  // USING TAN STACK QUERY
-  // const { data: teamData } = useGetTeamLines(currentTeam);
 
   return (
     <>
