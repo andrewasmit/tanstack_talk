@@ -61,6 +61,9 @@
   width: 50px;
   padding: 10px;
   margin: 5px 0px 5px auto;
+  position: sticky;
+  top: 0;
+  right: 0;
 }
 .close-modal:hover{
   cursor: pointer;
@@ -106,6 +109,7 @@
   max-height: 850px;
   overflow-y: auto;
   z-index: 1001;
+  position: relative;
 }
 
 .player-wrapper {
