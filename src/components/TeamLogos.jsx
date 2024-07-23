@@ -1,11 +1,9 @@
 // External Dependencies
 import { useMemo } from 'react'
 
-// Internal Dependencies
-
 // Local Dependencies
-import { allTeams } from './allTeams';
-import './App.css'
+import { allTeams } from '../assets/allTeams';
+import '../App.css'
 
 
 function TeamLogos({ handleOpen, setCurrentTeam }) {

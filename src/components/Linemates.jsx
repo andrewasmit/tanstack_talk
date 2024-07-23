@@ -1,11 +1,7 @@
-// External Dependencies
-
-// Internal Dependencies
-
 // Local Dependencies
-import './App.css'
+import '../App.css'
 import { useMemo } from 'react';
-import { getGridClass } from './hooks/gridClassHelper';
+import { getGridClass } from '../hooks/gridClassHelper';
 
 function Linemates({ data, handleClose }) {
 

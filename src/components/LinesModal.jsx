@@ -2,11 +2,11 @@
 // import { useEffect, useState } from 'react';
 
 // Internal Dependencies
-import { useGetTeamLines } from './hooks/useGetTeamLines';
+import { useGetTeamLines } from '../hooks/useGetTeamLines';
 
 // Local Dependencies
 import Linemates from './Linemates';
-import './App.css'
+import '../App.css'
 
 
 function LinesModal({ currentTeam, handleClose, teamData }) {

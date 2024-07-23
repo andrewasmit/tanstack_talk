@@ -5,8 +5,8 @@ import { useState, useEffect } from 'react'
 import { useIsOpen } from './hooks/useIsOpen';
 
 // Local Dependencies
-import TeamLogos from './TeamLogos';
-import LinesModal from './LinesModal';
+import TeamLogos from './components/TeamLogos';
+import LinesModal from './components/LinesModal';
 import './App.css'
 
 function App() {
