@@ -1,5 +1,5 @@
 // Internal Dependencies
-import { useGetTeamLines } from '../hooks/useGetTeamLines';
+// import { useGetTeamLines } from '../hooks/useGetTeamLines';
 
 // Local Dependencies
 import Linemates from './Linemates';
@@ -7,21 +7,16 @@ import '../App.css'
 
 
 function LinesModal({ 
-  currentTeam, 
+  // currentTeam, 
   handleClose, 
-  // teamData 
+  teamData 
 }) {
 
   // UTILIZING TAN STACK QUERY
-  const { data: teamData } = useGetTeamLines(currentTeam);
-  // const { 
-  //   data: teamData,
-  //   error,
-  //   // status,
-  //   isFetching,
-  // } = useGetTeamLines(currentTeam);
+  // const { data: teamData } = useGetTeamLines(currentTeam);
+  // Utilize more other available built-in hooks isFetching, error, etc.
 
-  console.log("TEAM DATA: ", teamData);
+  // console.log("TEAM DATA: ", teamData);
 
   // if(error){
   //   return (
