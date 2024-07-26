@@ -7,26 +7,25 @@ import '../App.css'
 
 
 function LinesModal({ 
-  // currentTeam, 
+  // currentTeam, // ID of Team Clicked on
   handleClose, 
-  teamData 
+  teamData //Old version of data fetched in App.js
 }) {
 
   // UTILIZING TAN STACK QUERY
-  // const { data: teamData } = useGetTeamLines(currentTeam);
-  // Utilize more other available built-in hooks isFetching, error, etc.
+  // const { data: teamData, isFetching, isError } = useGetTeamLines(currentTeam); // Utilize more other available built-in hooks isFetching, isError, etc.
 
   // console.log("TEAM DATA: ", teamData);
-
-  // if(error){
-  //   return (
-  //     <h4>{ error }</h4>
-  //   )
-  // }
 
   // if(isFetching){
   //   return (
   //     <h3 className='loading-screen'>Loading...</h3>
+  //   )
+  // }
+
+  // if(isError){
+  //   return (
+  //     <h4 className='loading-screen'>Try again later</h4>
   //   )
   // }
 

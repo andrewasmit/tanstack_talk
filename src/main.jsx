@@ -20,10 +20,11 @@ import App from './App.jsx'
 export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      cacheTime: 1000 * 60 * 60 * 24,
-      staleTime: 1000 * 60 * 60 * 24,
-    }, // 1000 Milliseconds * 60 Seconds * 60 Minutes * 24 Hours === This formula keeps data "fresh" for an entire day
-  },
+      cacheTime: 1000 * 60 * 60 * 24, // Duration befor inactive queries are removed from the cache. ** Defaults to 5 minutes **
+      staleTime: 1000 * 60 * 60 * 24, // Duration of when data will be read directly from the cache with no new requests
+      // refetchInterval: 1000 * 60 * 15 // How quickly/often refetches occur behind-the-scenes
+    }, 
+  }, // 1000 Milliseconds * 60 Seconds * 60 Minutes * 24 Hours === This formula keeps data "fresh" and readily available in cache for an entire day
 }); 
 
 // The only difference between queryClient on line 18 as opposed to line 18 is that
