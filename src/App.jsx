@@ -17,7 +17,7 @@ function App() {
   const [teamData, setTeamData] = useState();
 
   const proxy = "https://cors-anywhere-gzhu.onrender.com/"
-  const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/W9FRt5PFIRBjmn5x2i5ae/teams/"
+  const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/Y6RrRloCdVTq6Of00z_lD/teams/"
   const dailyFaceOffAPITag ="/line-combinations.json"
 
   const fetchTeamData = async (teamName) => {
