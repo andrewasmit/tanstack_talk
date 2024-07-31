@@ -83,6 +83,7 @@
   color: white;
   font-size: 24px;
   z-index: 1000;
+  margin-top: 0px;
 }
 
 .loading-screen::before {
