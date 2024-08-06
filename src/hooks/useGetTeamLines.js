@@ -32,6 +32,6 @@ export const useGetTeamLines = (teamName) => {
   return useQuery({
     queryKey: [`${teamName}-lines`],
     queryFn,
-    retry: 2,
+    // retry: 2,
   });
 };

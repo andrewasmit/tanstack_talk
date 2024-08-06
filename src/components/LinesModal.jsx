@@ -13,9 +13,9 @@ function LinesModal({
 }) {
 
   // UTILIZING TAN STACK QUERY
-  // const { data: teamData, isFetching, isError } = useGetTeamLines(currentTeam); // Utilize more other available built-in hooks isFetching, isError, etc.
+  // const { data: teamData } = useGetTeamLines(currentTeam); // Utilize more other available built-in hooks isFetching, isError, etc.
 
-  // console.log("TEAM DATA: ", teamData);
+  // console.log("TEAM DATA (in Modal): ", teamData);
 
   // if(isFetching){
   //   return (

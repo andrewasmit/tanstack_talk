@@ -29,7 +29,6 @@ function App() {
     if (res.status === 200) {
       return data;
     } else throw new Error(data.message);
-
   };
 
   useEffect(() => {   
@@ -39,7 +38,7 @@ function App() {
     });
   }, [currentTeam]);
 
-  console.log("TEAM DATA in App.js: ", teamData);
+  console.log("TEAM DATA (in App.js): ", teamData);
 
   const { 
     handleOpen: openPopup, 
