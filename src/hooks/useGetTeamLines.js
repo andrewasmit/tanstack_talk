@@ -4,7 +4,7 @@ import { useCallback, useMemo } from "react";
 
 // Local Variables
 const proxy = "https://cors-anywhere-gzhu.onrender.com/"
-const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/Y6RrRloCdVTq6Of00z_lD/teams/" // If ever any 404 errors, it is most likely the string between /data/ and /teams/ that needs to be updated
+const dailyFaceOffAPIBaseURL = "https://www.dailyfaceoff.com/_next/data/0ShjvTonDzkirazUYPU28/teams/" // If ever any 404 errors, it is most likely the string between /data/ and /teams/ that needs to be updated
 const dailyFaceOffAPITag ="/line-combinations.json"
 
 
